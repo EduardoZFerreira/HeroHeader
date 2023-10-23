@@ -1,0 +1,101 @@
+@keyframes diagonalMovement {
+  0% {
+    transform: translate(80vw, 60vh);
+  }
+  50% {
+    transform: translate(1vw, 1vh);
+  }
+}
+@keyframes hourglassMovement {
+  0% {
+    transform: translate(60vw, 1vh);
+  }
+  25% {
+    transform: translate(10vw, 50vh);
+  }
+  50% {
+    transform: translate(5vw, 1vh);
+  }
+  75% {
+    transform: translate(70vw, 30vh);
+  }
+  100% {
+    transform: translate(60vw, 1vh);
+  }
+}
+@keyframes circularMovement {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes randomMovement {
+  0%, 100% {
+    transform: translate(70vw, -30vh);
+  }
+  25% {
+    transform: translate(50vw, 30vh);
+  }
+}
+@keyframes horizontalMovement {
+  0%, 100% {
+    transform: translate(-20vw, 40vh);
+  }
+  50% {
+    transform: translate(90vw, -2vh);
+  }
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.container .gradient-circle {
+  filter: blur(3rem);
+  position: absolute;
+  z-index: 0;
+}
+.container .circle-1 {
+  background: radial-gradient(50% 40% at 50% 50%, #ADD8B3 0%, rgba(255, 255, 255, 0) 100%);
+  width: 200px;
+  height: 300px;
+  transform: translate(80vw, 60vh);
+  animation: diagonalMovement 120s ease-in-out infinite;
+  animation-delay: 5s;
+}
+.container .circle-2 {
+  background: radial-gradient(50% 40% at 50% 50%, #ADBDD8 0%, rgba(255, 255, 255, 0) 100%);
+  width: 500px;
+  height: 700px;
+  left: 40%;
+  transform-origin: calc(50% - 800px);
+  animation: circularMovement 40s ease-in-out infinite;
+}
+.container .circle-3 {
+  background: radial-gradient(50% 40% at 50% 50%, #D8ADD2 0%, rgba(255, 255, 255, 0) 100%);
+  width: 600px;
+  height: 900px;
+  transform: translate(70vw, -30vh);
+  animation: randomMovement 120s ease-in-out infinite;
+  z-index: 2;
+  animation-delay: 1s;
+}
+.container .circle-4 {
+  background: radial-gradient(50% 40% at 50% 50%, #D8C8AD 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100px;
+  height: 150px;
+  transform: translate(120vw, 1vh);
+  animation: hourglassMovement 120s ease-in-out infinite;
+  z-index: 2;
+}
+.container .circle-5 {
+  background: radial-gradient(50% 40% at 50% 50%, white 0%, rgba(255, 255, 255, 0) 100%);
+  width: 800px;
+  height: 1000px;
+  transform: translate(-20vw, 40vh);
+  animation: horizontalMovement 90s ease-in-out infinite;
+  animation-delay: 8s;
+}/*# sourceMappingURL=circles.css.map */

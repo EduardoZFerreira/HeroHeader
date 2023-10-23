@@ -1,0 +1,63 @@
+@import "colors";
+@import "keyframes";
+@import "circles";
+
+body {
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(45deg, $darkB, $darkA);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+    .hero-text {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.0);
+        text-align: center;
+        font-family: Bebas Neue;
+        font-size: clamp(2rem, 10vw, 8rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-width: 60vw;
+        z-index: 1;
+        cursor: default;
+        background: linear-gradient(to right, $light, $light) no-repeat;
+        background-clip: text;
+        background-size: 100% 0%;
+        animation: animateHeroText 0.6s ease-in-out forwards;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border-right: solid $light;
+            border-width: 0rem;
+            width: 0;
+            height: clamp(2rem, 10vw, 8rem);
+            animation: animateTextBorder 0.6s ease-in-out forwards;
+        }
+    }
+
+    @for $i from 1 through 2 {
+        .hero-text:nth-child(#{$i}) {
+            animation-delay: #{0.6 * $i}s;
+            &:before {
+                animation-delay: #{0.6 * $i}s;
+            }
+        }
+    }
+
+    .header-bottom {
+        z-index: 1;
+        position: absolute;
+        opacity: 0;
+        bottom: 0;
+        transform: scale(0.3);
+        color: $light;
+        animation: animateArrowIn 1s forwards, animateArrow 2s ease-in-out infinite;
+        animation-delay: 2s;
+    }
+}

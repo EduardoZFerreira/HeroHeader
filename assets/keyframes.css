@@ -1,0 +1,89 @@
+@keyframes diagonalMovement {
+  0% {
+    transform: translate(80vw, 60vh);
+  }
+  50% {
+    transform: translate(1vw, 1vh);
+  }
+}
+@keyframes hourglassMovement {
+  0% {
+    transform: translate(60vw, 1vh);
+  }
+  25% {
+    transform: translate(10vw, 50vh);
+  }
+  50% {
+    transform: translate(5vw, 1vh);
+  }
+  75% {
+    transform: translate(70vw, 30vh);
+  }
+  100% {
+    transform: translate(60vw, 1vh);
+  }
+}
+@keyframes circularMovement {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes randomMovement {
+  0%, 100% {
+    transform: translate(70vw, -30vh);
+  }
+  25% {
+    transform: translate(50vw, 30vh);
+  }
+}
+@keyframes horizontalMovement {
+  0%, 100% {
+    transform: translate(-20vw, 40vh);
+  }
+  50% {
+    transform: translate(90vw, -2vh);
+  }
+}
+@keyframes animateHeroText {
+  0% {
+    filter: blur(0.2rem);
+    background-size: 0%;
+  }
+  100% {
+    filter: blur(0);
+    background-size: 100%;
+  }
+}
+@keyframes animateTextBorder {
+  0% {
+    border-width: 0.2rem;
+    width: 0%;
+  }
+  90% {
+    border-width: 0.2rem;
+    width: 100%;
+  }
+  100% {
+    border-width: 0rem;
+    width: 100%;
+  }
+}
+@keyframes animateArrow {
+  0%, 100% {
+    transform: scale(0.3) translateY(0);
+  }
+  50% {
+    transform: scale(0.3) translateY(-2rem);
+  }
+}
+@keyframes animateArrowIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=keyframes.css.map */
